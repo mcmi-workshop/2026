@@ -1,0 +1,1029 @@
+/*************************************************************************
+ * MCMI 2026 Custom Styles - Modern Minimal Design
+ * Clean, elegant workshop website styling
+ *************************************************************************/
+
+/* ============================================
+   CSS VARIABLES FOR THEMING
+   ============================================ */
+
+:root {
+  /* Logo-based color palette - Red & Blue */
+  --primary-color: #004aac;
+  --primary-light: #1a5fbd;
+  --primary-dark: #003a8c;
+  --primary-subtle: rgba(0, 74, 172, 0.08);
+  
+  /* Accent colors */
+  --accent-color: #ff3130;
+  --accent-light: #ff5a59;
+  --accent-gradient: linear-gradient(135deg, #004aac 0%, #1a5fbd 50%, #ff3130 100%);
+  
+  /* Legacy variable mappings */
+  --header-color: #004aac;
+  
+  /* Neutral colors */
+  --bg-color: #fafafa;
+  --content-bg: #ffffff;
+  --text-color: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+  
+  /* Menu colors */
+  --menu-bg: #ffffff;
+  --menu-text: #52525b;
+  --menu-border: #f4f4f5;
+  
+  /* UI elements */
+  --border-color: #e4e4e7;
+  --secondary-bg: #fafafa;
+  --card-bg: #ffffff;
+  --card-border: #f4f4f5;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-hover-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+  --hover-bg: rgba(99, 102, 241, 0.06);
+  
+  /* Links */
+  --link-color: #6366f1;
+  --link-hover: #4f46e5;
+  
+  /* Dropdown */
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #f4f4f5;
+  --dropdown-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --dropdown-hover: #fafafa;
+}
+
+/* Dark mode theme */
+.dark-mode {
+  --primary-color: #4d8fdf;
+  --primary-light: #6ba3e8;
+  --primary-dark: #004aac;
+  --primary-subtle: rgba(77, 143, 223, 0.15);
+  --header-color: #4d8fdf;
+  
+  --accent-color: #ff5a59;
+  --accent-light: #ff8180;
+  --accent-gradient: linear-gradient(135deg, #4d8fdf 0%, #6ba3e8 50%, #ff5a59 100%);
+  
+  --bg-color: #09090b;
+  --content-bg: #18181b;
+  --text-color: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  
+  --menu-bg: #18181b;
+  --menu-text: #a1a1aa;
+  --menu-border: #27272a;
+  
+  --border-color: #27272a;
+  --secondary-bg: #27272a;
+  --card-bg: #27272a;
+  --card-border: #3f3f46;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --card-hover-shadow: 0 20px 40px rgba(129, 140, 248, 0.2);
+  --hover-bg: rgba(129, 140, 248, 0.12);
+  
+  --link-color: #818cf8;
+  --link-hover: #a5b4fc;
+  
+  --dropdown-bg: #27272a;
+  --dropdown-border: #3f3f46;
+  --dropdown-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  --dropdown-hover: #3f3f46;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ============================================
+   MENU CONTAINER - STICKY HEADER
+   ============================================ */
+
+.menu-container {
+  background-color: var(--menu-bg);
+  border-bottom: 1px solid var(--menu-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+.menu-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dark-mode .menu-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   MENU LAYOUT
+   ============================================ */
+
+.menu {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu .menu-table {
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.menu .logo {
+  margin-left: 0;
+}
+
+.menu .logo .image {
+  max-width: 80px;
+  margin: 4px 0;
+  transition: transform 0.2s ease;
+}
+
+.menu .logo:hover .image {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   MENU ITEMS - DESKTOP
+   ============================================ */
+
+.menu .menu-items {
+  gap: 2px;
+}
+
+.menu .menu-items > a,
+.menu .menu-items > div {
+  color: var(--menu-text);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.menu .menu-items > a:not(:last-child),
+.menu .menu-items > div:not(:last-child) {
+  margin-right: 2px;
+}
+
+.menu .menu-items > a:hover,
+.menu .menu-items > div:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+}
+
+.dark-mode .menu .menu-items > a:hover,
+.dark-mode .menu .menu-items > div:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+}
+
+/* Active menu item styling */
+.menu-index,
+.menu-dates,
+.menu-submit,
+.menu-authors,
+.menu-conference,
+.menu-about {
+  position: relative;
+}
+
+/* ============================================
+   DROPDOWN MENU STYLES
+   ============================================ */
+
+.menu .menu-items .dropdown {
+  position: relative;
+  overflow: visible !important;
+  padding: 0;
+  background: transparent !important;
+}
+
+.menu .menu-items .dropdown:hover {
+  background: transparent !important;
+}
+
+.menu .menu-items .dropdown .dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.menu .menu-items .dropdown .dropbtn:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+}
+
+.menu .menu-items .dropdown i {
+  color: var(--menu-text);
+  font-size: 15px !important;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu .menu-items .dropdown:hover i {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+.menu .menu-items .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dropdown-bg);
+  min-width: 240px;
+  border: 1px solid var(--dropdown-border);
+  border-radius: 12px;
+  box-shadow: var(--dropdown-shadow);
+  z-index: 1001;
+  padding: 8px;
+  padding-top: 16px;
+  margin-top: 0;
+}
+
+/* Invisible bridge to prevent dropdown from closing */
+.menu .menu-items .dropdown .dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+.menu .menu-items .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu .menu-items .dropdown .dropdown-content a {
+  color: var(--text-color);
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  margin: 2px 0;
+}
+
+.menu .menu-items .dropdown .dropdown-content a:hover {
+  background-color: var(--dropdown-hover);
+  color: var(--primary-color);
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode dropdown adjustments */
+.dark-mode .menu .menu-items .dropdown .dropdown-content {
+  box-shadow: var(--dropdown-shadow);
+}
+
+/* ============================================
+   DARK MODE TOGGLE
+   ============================================ */
+
+.dark-mode-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: var(--menu-text);
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.dark-mode-toggle:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+}
+
+/* ============================================
+   MOBILE MENU - HAMBURGER
+   ============================================ */
+
+.menu .menu-button {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menu .menu-button:hover {
+  background-color: var(--primary-subtle);
+}
+
+.menu .menu-button img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+
+.dark-mode .menu .menu-button img {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+/* ============================================
+   BANNER STYLES
+   ============================================ */
+
+.banner {
+  position: relative;
+  display: flex;
+  background-color: var(--primary-color);
+}
+
+.banner .banner-table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner .flex-item {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.banner h2 {
+  color: white;
+  margin: 0;
+}
+
+.banner p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.strokeme {
+  color: white;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary banners (section headers) */
+.content-container > .banner:not(:first-child) {
+  background: linear-gradient(135deg, var(--primary-color), #1a5fbd, var(--accent-color));
+  min-height: auto;
+  padding: 0;
+}
+
+.content-container > .banner:not(:first-child) .banner-table {
+  padding: 0;
+}
+
+.content-container > .banner:not(:first-child) .flex-item {
+  padding: 20px 30px;
+}
+
+.content-container > .banner:not(:first-child) h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0 !important;
+  padding-left: 0;
+  border-left: none;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h2 {
+  color: var(--text-color);
+  margin: 18px 0 8px 0 !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 12px;
+  padding-bottom: 0;
+  border-left: 3px solid var(--primary-color);
+}
+
+h2::after {
+  display: none;
+}
+
+h3 {
+  color: var(--primary-color);
+  margin: 16px 0 8px 0 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  display: block;
+  padding-bottom: 0;
+}
+
+h3::after {
+  display: none;
+}
+
+/* ============================================
+   CONTENT CONTAINER
+   ============================================ */
+
+.content-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: var(--content-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+.content {
+  padding: 35px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: auto !important;
+  min-height: 0 !important;
+  flex: none !important;
+}
+
+.content-table {
+  padding: 0;
+  height: auto !important;
+}
+
+.content > .content-table {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.content > .content-table > .flex-row {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.content > .content-table > .flex-row > .flex-item {
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0;
+}
+
+.content .text {
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.content a {
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+
+.content a:hover {
+  border-bottom-color: var(--link-hover);
+}
+
+/* ============================================
+   LISTS - MODERN STYLING
+   ============================================ */
+
+.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+.content ul li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.content ul li b {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* ============================================
+   ORGANIZER CARDS
+   ============================================ */
+
+.organizer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.organizer-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.organizer-card:hover {
+  border-color: var(--primary-color);
+  background-color: var(--hover-bg);
+}
+
+.organizer-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+.organizer-card:hover .organizer-img {
+  border-color: var(--primary-color);
+}
+
+.organizer-name {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.organizer-name a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+
+.organizer-card:hover .organizer-name {
+  color: var(--primary-color);
+}
+
+.organizer-affil {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ============================================
+   LOGO SECTIONS / SPONSOR IMAGES
+   ============================================ */
+
+.control-group {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.custom-image-button {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.custom-image-button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ============================================
+   IMAGE STYLING
+   ============================================ */
+
+img {
+  border-radius: 8px;
+}
+
+.image-wrap-text-custom {
+  float: left;
+  margin: 5px 35px 20px 0;
+}
+
+.max-width-200 { max-width: 200px; }
+.max-width-283 { max-width: 283px; }
+.max-width-400 { max-width: 400px; }
+.max-width-510 { max-width: 510px; }
+
+/* ============================================
+   FORM CONTROLS
+   ============================================ */
+
+.custom-dropdown,
+.custom-textbox {
+  width: 240px;
+}
+
+#share-url-copy-prompt {
+  display: none;
+  color: var(--primary-color);
+}
+
+#dialog-1, #dialog-2, #dialog-3, #dialog-4, #share-dialog {
+  display: none;
+}
+
+#share-url {
+  width: 100%;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer-container {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  padding: 40px 30px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-container .banner {
+  background: transparent !important;
+  min-height: auto;
+}
+
+.footer-container .banner-table {
+  padding: 0;
+}
+
+.footer-container p,
+.footer-container .text {
+  color: #a1a1aa;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-container a {
+  color: #818cf8;
+  transition: color 0.2s ease;
+}
+
+.footer-container a:hover {
+  color: #a5b4fc;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  max-width: 60px;
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #a1a1aa;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #818cf8;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3f3f46, transparent);
+  margin: 20px auto;
+}
+
+.footer-copyright {
+  color: #71717a;
+  font-size: 12px;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET & MOBILE MENU
+   ============================================ */
+
+@media screen and (max-width: 1050px) {
+  .menu .menu-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .menu .menu-items {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 0 20px 0;
+    background-color: var(--menu-bg);
+    margin-bottom: 0;
+  }
+
+  .menu .menu-items > a,
+  .menu .menu-items > div {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    margin: 0 !important;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .menu .menu-items > a:first-child,
+  .menu .menu-items > div:first-child {
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* Mobile dropdown behavior */
+  .menu .menu-items .dropdown {
+    overflow: visible !important;
+  }
+
+  .menu .menu-items .dropdown .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: 100%;
+    background-color: var(--dropdown-hover);
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu .menu-items .dropdown .dropdown-content::before,
+  .menu .menu-items .dropdown .dropdown-content::after {
+    display: none;
+  }
+
+  .menu .menu-items .dropdown:hover .dropdown-content,
+  .menu .menu-items .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  .menu .menu-items .dropdown .dropdown-content a {
+    padding: 12px 20px 12px 40px;
+    border-radius: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+  }
+
+  .menu .menu-items .dropdown .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+
+  /* Focus handling for mobile menu */
+  .menu .menu-button:focus + .menu-items,
+  .menu .menu-items:hover {
+    display: flex;
+  }
+
+  /* Dark mode toggle in mobile */
+  .dark-mode-toggle {
+    margin: 10px 20px;
+    justify-content: flex-start;
+    padding: 14px 0;
+    border-bottom: none;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+  .organizer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  .content {
+    padding: 35px 20px;
+  }
+
+  .banner .flex-item {
+    padding: 30px 20px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+
+@media screen and (max-width: 500px) {
+  .organizer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .image-wrap-text-custom {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    float: none;
+  }
+
+  .content {
+    padding: 30px 16px;
+  }
+
+  .content .text {
+    font-size: 15px;
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .control-group {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .custom-image-button {
+    max-width: 120px !important;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 10px !important; }
+.mt-2 { margin-top: 20px !important; }
+.mt-3 { margin-top: 30px !important; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 10px !important; }
+.mb-2 { margin-bottom: 20px !important; }
+.mb-3 { margin-bottom: 30px !important; }
+
+/* ============================================
+   SELECTION STYLING
+   ============================================ */
+
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}

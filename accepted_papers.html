@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+  <title>MCMI 2026</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+  
+  <style>
+    .menu-conference {
+      color: var(--header-color) !important;
+      opacity: 1 !important;
+    }
+
+    /* Enhanced Table Styles */
+    .papers-table-container {
+      margin: 2rem auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      background: var(--content-bg);
+    }
+
+    .papers-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--content-bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+    }
+
+    .papers-table thead {
+      background-color: var(--header-color);
+    }
+
+    .papers-table th {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1em;
+      white-space: nowrap;
+    }
+
+    .papers-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    .papers-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .papers-table tbody tr {
+      transition: all 0.3s ease;
+    }
+
+    .papers-table tbody tr:hover {
+      background-color: var(--hover-bg);
+      transform: translateX(6px);
+    }
+
+    .paper-title {
+      color: var(--link-color);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      font-size: 1.1em;
+      line-height: 1.4;
+    }
+
+    .paper-authors {
+      color: var(--text-color);
+      font-size: 0.95em;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+    /* Responsive Enhancements */
+    @media (max-width: 1024px) {
+      .papers-table-container {
+        margin: 1rem;
+        border-radius: 8px;
+      }
+      
+      .papers-table th,
+      .papers-table td {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .papers-table-container {
+        margin: 0.5rem;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+      }
+
+      .papers-table {
+        display: block;
+      }
+      
+      .papers-table th {
+        font-size: 1em;
+        padding: 0.75rem;
+      }
+
+      .papers-table td {
+        padding: 0.75rem;
+      }
+      
+      .papers-table thead,
+      .papers-table tbody,
+      .papers-table tr {
+        display: block;
+      }
+      
+      .papers-table tr {
+        margin-bottom: 1rem;
+        border-bottom: 2px solid var(--border-color);
+      }
+      
+      .papers-table td {
+        display: block;
+        text-align: left;
+        border-bottom: none;
+      }
+      
+      .papers-table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .paper-title {
+        font-size: 1em;
+      }
+
+      .paper-authors {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Banner Enhancement */
+    .banner-text {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .content-section {
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 300px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="banner" style="background: url('img/lyon.webp') no-repeat center; background-size: cover; height: 320px;">
+      <div class="banner-table flex-column" style="background: linear-gradient(135deg, rgba(0, 74, 172, 0.92), rgba(26, 95, 189, 0.88), rgba(255, 49, 48, 0.85));">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h1 class="add-top-margin-small strokeme">
+              MCMI 2026 - Accepted Papers
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+    <div class="content-section">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <div class="papers-table-container">
+              <h3>Coming Soon</h3>
+              <p>The list of accepted papers will be available after the notification deadline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="footer-container"></div>
+</body>
+</html>
