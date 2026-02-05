@@ -3,9 +3,9 @@
 ## 🔴 Critical (Required Before Launch)
 
 ### Important Dates
-- [x] Set submission deadline (May 18, 2026)
-- [x] Set notification date (June 15, 2026)
-- [x] Set camera-ready deadline (July 20, 2026)
+- [x] Set submission deadline (April 20, 2026)
+- [x] Set notification date (May 20, 2026)
+- [x] Set camera-ready deadline (June 6, 2026)
 - [x] Set workshop date (August 21, 2026)
 - [x] Update dates in both `index.html` and `dates.html`
 - [x] Update dates in `js/config.js`
