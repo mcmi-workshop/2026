@@ -3,17 +3,18 @@
 ## 🔴 Critical (Required Before Launch)
 
 ### Important Dates
-- [ ] Set submission deadline (currently "Coming Soon")
-- [ ] Set notification date (currently "Coming Soon")
-- [ ] Set camera-ready deadline (currently "Coming Soon")
-- [ ] Set workshop date (currently "Coming Soon")
-- [ ] Update dates in both `index.html` and `dates.html`
-- [ ] Update dates in `js/config.js`
+- [x] Set submission deadline (May 18, 2026)
+- [x] Set notification date (June 15, 2026)
+- [x] Set camera-ready deadline (July 20, 2026)
+- [x] Set workshop date (August 21, 2026)
+- [x] Update dates in both `index.html` and `dates.html`
+- [x] Update dates in `js/config.js`
 
 ### Submission System
-- [ ] Add submission link (currently `#` in `js/config.js`)
-- [ ] Update submission link reference in `authors.html` (line mentioning "submission site will be available soon")
-- [ ] Test submission link works
+- [x] Add submission link (https://cmt3.research.microsoft.com/MCMI2026/Track/1/Submission/Create)
+- [x] Update submission link reference in `authors.html`
+- [x] Test submission link works
+- [x] Add CMT acknowledgment to website
 
 ### Content
 - [ ] Add Program Committee members (currently "To be announced" in `about.html`)
@@ -97,6 +98,6 @@
 
 ---
 
-**Last Updated**: January 29, 2026
+**Last Updated**: February 5, 2026
 
 **Note**: Mark items as complete by changing `[ ]` to `[x]`
