@@ -1,0 +1,125 @@
+========================================================================
+                        CALL FOR PAPERS
+
+        MCMI 2026 — 2nd International Workshop on Multi- and 
+      Cross-Modal Information for Enhanced Pattern Recognition
+
+                August 21, 2026 — Lyon, France
+                  Co-located with ICPR 2026
+
+                     IAPR-endorsed event
+
+              https://mcmi-workshop.github.io/2026/
+========================================================================
+
+OVERVIEW
+--------
+
+The 2nd edition of the MCMI workshop invites contributions at the
+intersection of multimodal learning and pattern recognition. Multimodal
+learning, integrating text, images, audio, and other signals, has
+become central to advancing pattern recognition. This workshop brings
+together researchers across computer vision, audio processing, and
+natural language processing to focus on shared challenges in fusing
+heterogeneous data sources and designing systems that exploit
+complementary modalities.
+
+We welcome contributions on novel methodologies for multimodal fusion
+and interaction, with applications covering human-machine interaction,
+complex data analysis, and domains such as healthcare, where
+multimodal approaches are proving valuable for diagnosis and clinical
+decision-making. The goal is to promote exchange across traditionally
+separate research communities and explore together new directions in
+cross-modal representation and reasoning.
+
+
+TOPICS OF INTEREST
+------------------
+
+Topics include, but are not limited to:
+
+Multimodal Architectures and Learning:
+  - Multimodal Fusion Strategies
+  - Deep Learning Architectures for Multimodal Data
+  - Cross-Modal Feature Extraction and Representation Learning
+  - Self-Supervised and Contrastive Multimodal Learning
+  - Large Multimodal Models and Foundation Models
+  - Temporal Modeling in Multimodal Systems
+
+Applications:
+  - Audio-Visual Speech Recognition
+  - Scene and Object Recognition from Audio-Visual Cues
+  - Emotion Recognition from Multimodal Signals
+  - Multimodal NLP and Vision-Language Models
+  - Multimodal Applications in Healthcare
+  - Interaction Paradigms for Multimodal Data Acquisition
+
+Evaluation, Ethics, and Security:
+  - Multimodal Datasets and Benchmarks
+  - Robustness and Generalization across Modalities
+  - Adversarial Attacks and Defenses
+  - Privacy-Preserving Multimodal Learning
+  - Explainability in Multimodal Systems
+  - Ethical Considerations in Multimodal Data
+
+
+IMPORTANT DATES
+---------------
+
+  Paper Submission Deadline:      April 20, 2026
+  Notification to Authors:        May 20, 2026
+  Camera Ready & Registration:    June 6, 2026
+  Workshop Date:                  August 21, 2026
+
+  All deadlines: 23:59 AoE (Anywhere on Earth).
+
+
+SUBMISSION GUIDELINES
+---------------------
+
+  - Format: Springer LNCS (templates available on the ICPR 2026 site)
+  - Maximum length: 15 pages (including references, figures, tables,
+    and appendices). Extra pages: EUR 150 each.
+  - Submissions must be in PDF and follow a double-blind review
+    process (no author names or affiliations in the manuscript).
+  - Full papers (> 6 pages) will be published in LNCS proceedings.
+    Short papers (≤ 6 pages) may be presented but will not appear
+    in the proceedings.
+
+  Submit via Microsoft CMT:
+  https://cmt3.research.microsoft.com/MCMI2026/Track/1/Submission/Create
+
+  LaTeX template:  https://icpr2026.org/files/ICPR_2026_LaTeX_Templates.zip
+  Word template:   https://icpr2026.org/files/ICPR_2026_DOC_Templates.zip
+
+
+PUBLICATION
+-----------
+
+All accepted full papers will be published in Lecture Notes in
+Computer Science (LNCS), Springer. At least one author of each
+accepted paper must register for ICPR 2026. Papers not presented
+at the workshop will not be included in the proceedings.
+
+
+ORGANIZING COMMITTEE
+--------------------
+
+  Moreno La Quatra      — Kore University of Enna, Italy
+  Nicole Dalia Cilia    — Kore University of Enna, Italy
+  Vincenzo Conti        — Kore University of Enna, Italy
+  Salvatore Sorce       — Kore University of Enna, Italy
+  Giuseppe Pappalardo   — Kore University of Enna, Italy
+  Valerio Mario Salerno — Kore University of Enna, Italy
+
+
+CONTACT & MORE INFORMATION
+---------------------------
+
+  Email:            mcmi@unikore.it
+  Workshop website: https://mcmi-workshop.github.io/2026/
+  ICPR 2026:        https://icpr2026.org/
+
+========================================================================
+  We look forward to receiving your submissions!
+========================================================================
