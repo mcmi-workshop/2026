@@ -1027,3 +1027,22 @@ img {
 .dark-mode ::-webkit-scrollbar-thumb {
   background: var(--border-color);
 }
+
+/* ============================================
+   DEADLINE DATE STYLING
+   Old dates: muted strikethrough; New dates: soft dark red
+   ============================================ */
+
+.date-old {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-weight: inherit;
+}
+
+.date-new {
+  color: #922b2b;
+}
+
+.dark-mode .date-new {
+  color: #e07070;
+}
