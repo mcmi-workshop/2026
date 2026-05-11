@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
@@ -110,7 +111,17 @@
             <!-- --------------------------------------------------------- -->
             <h3>Members</h3>
             
-            <p>To be announced</p>
+            <ul id="pc-list"></ul>
+            <script>
+              (function() {
+                var list = document.getElementById('pc-list');
+                SITE_DATA.programCommittee.forEach(function(m) {
+                  var li = document.createElement('li');
+                  li.innerHTML = '<b>' + m.name + '</b>, ' + m.affiliation;
+                  list.appendChild(li);
+                });
+              })();
+            </script>
           </div>
         </div>
       </div>

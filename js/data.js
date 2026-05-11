@@ -58,8 +58,18 @@ const SITE_DATA = {
   // PROGRAM COMMITTEE
   // ============================================
   programCommittee: [
-    // Add members here as the committee is formed
-    // { name: "Name", affiliation: "Institution, Country" },
+    { name: "Alkis Koudounas", affiliation: "Sony Group Corporation" },
+    { name: "Andrea Pietro Arena", affiliation: "Kore University of Enna" },
+    { name: "Carmelo Militello", affiliation: "Italian National Research Council (CNR)" },
+    { name: "Eliana Pastor", affiliation: "Politecnico di Torino" },
+    { name: "Flavio Giobergia", affiliation: "Politecnico di Torino" },
+    { name: "Giovanni Fanara", affiliation: "Kore University of Enna" },
+    { name: "Giuseppe Gallipoli", affiliation: "Politecnico di Torino" },
+    { name: "Ismail Harrando", affiliation: "Complex Systems Institute CNRS - Sciences Po médialab" },
+    { name: "Lorenzo Vaiani", affiliation: "Politecnico di Torino" },
+    { name: "Salvatore Greco", affiliation: "King's College London" },
+    { name: "Sofia Glorioso", affiliation: "Kore University of Enna" },
+    { name: "Wellington Santos", affiliation: "Universidade Federal de Pernambuco" },
   ],
 
   // ============================================

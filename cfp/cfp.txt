@@ -1,15 +1,16 @@
-========================================================
-                    CALL FOR PAPERS
+========================================================================
+                        CALL FOR PAPERS
 
-MCMI 2026 - 2nd International Workshop on Multi- and
-Cross-Modal Information for Enhanced Pattern Recognition
+        MCMI 2026 — 2nd International Workshop on Multi- and 
+      Cross-Modal Information for Enhanced Pattern Recognition
 
-            August 21, 2026 - Lyon, France
-              Co-located with ICPR 2026
+                August 21, 2026 — Lyon, France
+                  Co-located with ICPR 2026
 
-                IAPR-endorsed event
-        https://mcmi-workshop.github.io/2026/
-========================================================
+                     IAPR-endorsed event
+
+              https://mcmi-workshop.github.io/2026/
+========================================================================
 
 OVERVIEW
 --------
@@ -65,10 +66,10 @@ Evaluation, Ethics, and Security:
 IMPORTANT DATES
 ---------------
 
-  Paper Submission Deadline: April 20, 2026
-  Notification to Authors: May 20, 2026
-  Camera Ready & Registration: June 6, 2026
-  Workshop Date: August 21, 2026
+  Paper Submission Deadline:      May 5, 2026    [EXTENDED]
+  Notification to Authors:        June 2, 2026   [EXTENDED]
+  Camera Ready & Registration:    June 12, 2026  [EXTENDED]
+  Workshop Date:                  August 21, 2026
 
   All deadlines: 23:59 AoE (Anywhere on Earth).
 
@@ -78,11 +79,11 @@ SUBMISSION GUIDELINES
 
   - Format: Springer LNCS (templates available on the ICPR 2026 site)
   - Maximum length: 15 pages (including references, figures, tables,
-    and appendices).
+    and appendices). Extra pages: EUR 150 each.
   - Submissions must be in PDF and follow a double-blind review
     process (no author names or affiliations in the manuscript).
   - Full papers (> 6 pages) will be published in LNCS proceedings.
-    Short papers (≤ 6 pages) may be presented, but will not appear
+    Short papers (≤ 6 pages) may be presented but will not appear
     in the proceedings.
 
   Submit via Microsoft CMT:
@@ -104,21 +105,21 @@ at the workshop will not be included in the proceedings.
 ORGANIZING COMMITTEE
 --------------------
 
-  Moreno La Quatra - Kore University of Enna, Italy
-  Nicole Dalia Cilia - Kore University of Enna, Italy
-  Vincenzo Conti - Kore University of Enna, Italy
-  Salvatore Sorce - Kore University of Enna, Italy
-  Giuseppe Pappalardo - Kore University of Enna, Italy
-  Valerio Mario Salerno - Kore University of Enna, Italy
+  Moreno La Quatra      — Kore University of Enna, Italy
+  Nicole Dalia Cilia    — Kore University of Enna, Italy
+  Vincenzo Conti        — Kore University of Enna, Italy
+  Salvatore Sorce       — Kore University of Enna, Italy
+  Giuseppe Pappalardo   — Kore University of Enna, Italy
+  Valerio Mario Salerno — Kore University of Enna, Italy
 
 
 CONTACT & MORE INFORMATION
 ---------------------------
 
-  Email: mcmi@unikore.it
+  Email:            mcmi@unikore.it
   Workshop website: https://mcmi-workshop.github.io/2026/
-  ICPR 2026: https://icpr2026.org/
+  ICPR 2026:        https://icpr2026.org/
 
-==============================================
-We look forward to receiving your submissions!
-==============================================
+========================================================================
+  We look forward to receiving your submissions!
+========================================================================
