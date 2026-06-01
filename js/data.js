@@ -59,6 +59,7 @@ const SITE_DATA = {
   // ============================================
   programCommittee: [
     { name: "Alkis Koudounas", affiliation: "Sony Group Corporation" },
+    { name: "Alessandro D'Amelio", affiliation: "Università degli Studi di Milano" },
     { name: "Andrea Pietro Arena", affiliation: "Kore University of Enna" },
     { name: "Carmelo Militello", affiliation: "Italian National Research Council (CNR)" },
     { name: "Eliana Pastor", affiliation: "Politecnico di Torino" },
