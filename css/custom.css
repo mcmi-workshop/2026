@@ -523,6 +523,33 @@ h3::after {
   color: var(--text-secondary);
 }
 
+/* Temporary homepage announcement */
+.temporary-notice {
+  margin: 0 0 32px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, var(--primary-subtle), rgba(255, 49, 48, 0.06));
+  border: 1px solid rgba(0, 74, 172, 0.18);
+  border-radius: 10px;
+}
+
+.temporary-notice h2 {
+  margin: 0 0 5px !important;
+  padding: 0;
+  border: 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+
+.temporary-notice p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.dark-mode .temporary-notice {
+  border-color: rgba(77, 143, 223, 0.3);
+}
+
 /* ============================================
    LINKS
    ============================================ */
@@ -917,6 +944,10 @@ img {
   .banner .flex-item {
     padding: 30px 20px;
   }
+
+  .temporary-notice {
+    padding: 20px;
+  }
 }
 
 /* ============================================
@@ -946,6 +977,14 @@ img {
 
   .banner h1 {
     font-size: 1.5rem;
+  }
+
+  .temporary-notice {
+    padding: 18px 16px;
+  }
+
+  .temporary-notice h2 {
+    font-size: 1rem;
   }
 
   h2 {
