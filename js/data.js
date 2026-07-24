@@ -57,7 +57,7 @@ const SITE_DATA = {
         name: "Sofia Marilina Glorioso",
         affiliation: "Kore University of Enna, Italy",
         image: "img/local-organizers/smg.png",
-        website: null
+        website: "https://www.linkedin.com/in/sofia-marilina-glorioso-engineer"
       },
       {
         name: "Vito Cammarata",
