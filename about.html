@@ -54,41 +54,53 @@
           <div class="flex-item flex-column full-width">
             <!-- --------------------------------------------------------- -->
             <h3>Chairs</h3>
-            
-            <div class="organizer-grid">
-              <a href="https://mlaquatra.me" target="_blank" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/mlq.jpeg" alt="Moreno La Quatra">
-                <div class="organizer-name">Moreno La Quatra</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-              <a href="https://uke.it/ateneo/organizzazione/faculty/263" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/ndc.jpeg" alt="Nicole Dalia Cilia">
-                <div class="organizer-name">Nicole Dalia Cilia</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-              <a href="https://uke.it/ateneo/organizzazione/faculty/266" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/vc.jpeg" alt="Vincenzo Conti">
-                <div class="organizer-name">Vincenzo Conti</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-              <a href="https://uke.it/ateneo/organizzazione/faculty/384" target="_blank" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/ss.jpg" alt="Salvatore Sorce">
-                <div class="organizer-name">Salvatore Sorce</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-              <a href="https://uke.it/ateneo/organizzazione/faculty/436" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/gp.jpeg" alt="Giuseppe Pappalardo">
-                <div class="organizer-name">Giuseppe Pappalardo</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-              <a href="https://uke.it/ateneo/organizzazione/faculty/365" class="organizer-card">
-                <img class="organizer-img" src="img/organizers/vms.jpeg" alt="Valerio Mario Salerno">
-                <div class="organizer-name">Valerio Mario Salerno</div>
-                <div class="organizer-affil">Kore University of Enna, Italy</div>
-              </a>
-            </div>
+
+            <div class="organizer-grid" id="chairs-grid"></div>
+            <script>
+              (function() {
+                var grid = document.getElementById('chairs-grid');
+                SITE_DATA.organizers.chairs.forEach(function(person) {
+                  var tag = person.website ? 'a' : 'div';
+                  var card = document.createElement(tag);
+                  card.className = 'organizer-card';
+                  if (person.website) {
+                    card.href = person.website;
+                    card.target = '_blank';
+                  }
+                  card.innerHTML =
+                    '<img class="organizer-img" src="' + person.image + '" alt="' + person.name + '">' +
+                    '<div class="organizer-name">' + person.name + '</div>' +
+                    '<div class="organizer-affil">' + person.affiliation + '</div>';
+                  grid.appendChild(card);
+                });
+              })();
+            </script>
             
             <p class="text" style="margin-top: 20px;">Contact: <a href="mailto:mcmi@unikore.it">mcmi@unikore.it</a></p>
+
+            <!-- --------------------------------------------------------- -->
+            <h3>Local Organizers</h3>
+
+            <div class="organizer-grid" id="local-organizers-grid"></div>
+            <script>
+              (function() {
+                var grid = document.getElementById('local-organizers-grid');
+                SITE_DATA.organizers.localOrganizers.forEach(function(person) {
+                  var tag = person.website ? 'a' : 'div';
+                  var card = document.createElement(tag);
+                  card.className = 'organizer-card';
+                  if (person.website) {
+                    card.href = person.website;
+                    card.target = '_blank';
+                  }
+                  card.innerHTML =
+                    '<img class="organizer-img" src="' + person.image + '" alt="' + person.name + '">' +
+                    '<div class="organizer-name">' + person.name + '</div>' +
+                    '<div class="organizer-affil">' + person.affiliation + '</div>';
+                  grid.appendChild(card);
+                });
+              })();
+            </script>
             <!-- --------------------------------------------------------- -->
           </div>
         </div>

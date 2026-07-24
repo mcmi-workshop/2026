@@ -18,37 +18,57 @@ const SITE_DATA = {
       {
         name: "Moreno La Quatra",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
+        image: "img/organizers/mlq.jpeg",
         website: "https://mlaquatra.me"
       },
       {
         name: "Nicole Dalia Cilia",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
-        website: null
+        image: "img/organizers/ndc.jpeg",
+        website: "https://uke.it/ateneo/organizzazione/faculty/263"
       },
       {
         name: "Vincenzo Conti",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
-        website: null
+        image: "img/organizers/vc.jpeg",
+        website: "https://uke.it/ateneo/organizzazione/faculty/266"
       },
       {
         name: "Salvatore Sorce",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
-        website: null
+        image: "img/organizers/ss.jpg",
+        website: "https://uke.it/ateneo/organizzazione/faculty/384"
       },
       {
         name: "Giuseppe Pappalardo",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
-        website: null
+        image: "img/organizers/gp.jpeg",
+        website: "https://uke.it/ateneo/organizzazione/faculty/436"
       },
       {
         name: "Valerio Mario Salerno",
         affiliation: "Kore University of Enna, Italy",
-        image: "img/organizers/profile-placeholder.png",
+        image: "img/organizers/vms.jpeg",
+        website: "https://uke.it/ateneo/organizzazione/faculty/365"
+      }
+    ],
+    localOrganizers: [
+      {
+        name: "Sofia Marilina Glorioso",
+        affiliation: "Kore University of Enna, Italy",
+        image: "img/local-organizers/smg.png",
+        website: null
+      },
+      {
+        name: "Vito Cammarata",
+        affiliation: "Kore University of Enna, Italy",
+        image: "img/local-organizers/vc.png",
+        website: "https://www.linkedin.com/in/vito-cammarata-85a430310"
+      },
+      {
+        name: "Gabriele Trovato",
+        affiliation: "Kore University of Enna, Italy",
+        image: "img/local-organizers/gt.jpeg",
         website: null
       }
     ]
