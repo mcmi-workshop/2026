@@ -69,7 +69,7 @@ const SITE_DATA = {
         name: "Gabriele Trovato",
         affiliation: "Kore University of Enna, Italy",
         image: "img/local-organizers/gt.jpeg",
-        website: null
+        website: "https://www.linkedin.com/in/gabriele-trovato-40852529b/"
       }
     ]
   },
