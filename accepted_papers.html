@@ -16,45 +16,40 @@
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
   <link rel="icon" type="image/x-icon" href="/img/logo.ico">
-  
+
   <style>
     .menu-conference {
       color: var(--header-color) !important;
       opacity: 1 !important;
     }
 
-    /* Enhanced Table Styles */
-    .papers-table-container {
-      margin: 2rem auto;
-      border-radius: 12px;
+    .papers-wrap {
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
       overflow: hidden;
-      max-width: 1200px;
     }
 
     .papers-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      background: var(--content-bg);
+      border-collapse: collapse;
       font-family: 'Inter', sans-serif;
       color: var(--text-color);
     }
 
-    .papers-table thead {
-      background-color: var(--header-color);
-    }
-
     .papers-table th {
-      padding: 1.25rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       text-align: left;
       color: white;
+      background: var(--header-color);
       font-weight: 600;
-      font-size: 1.1em;
-      white-space: nowrap;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .papers-table td {
-      padding: 1.25rem 1.5rem;
+      padding: 1rem 1.5rem;
       border-bottom: 1px solid var(--border-color);
       vertical-align: top;
     }
@@ -63,109 +58,64 @@
       border-bottom: none;
     }
 
-    .papers-table tbody tr {
-      transition: all 0.3s ease;
+    /* Session label rows */
+    .papers-table .session-header td {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
     }
 
-    .papers-table tbody tr:hover {
-      background-color: var(--hover-bg);
-      transform: translateX(6px);
+    .papers-table .s1.session-header td { background: rgba(0, 74, 172, 0.09); color: #004aac; }
+    .papers-table .s2.session-header td { background: rgba(255, 49, 48, 0.09); color: #c42525; }
+    .papers-table .s3.session-header td { background: rgba(126, 64, 114, 0.09); color: #7e4072; }
+
+    /* Paper rows */
+    .papers-table .s1.paper-row td { background: rgba(0, 74, 172, 0.025); }
+    .papers-table .s2.paper-row td { background: rgba(255, 49, 48, 0.025); }
+    .papers-table .s3.paper-row td { background: rgba(126, 64, 114, 0.025); }
+
+    .paper-num {
+      width: 48px;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
     .paper-title {
-      color: var(--link-color);
+      font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      color: var(--text-color);
+      margin-bottom: 0.3rem;
+    }
+
+    .paper-link {
+      display: inline-block;
+      font-size: 0.82rem;
       font-weight: 500;
-      margin-bottom: 0.5rem;
-      font-size: 1.1em;
-      line-height: 1.4;
+      color: var(--link-color);
+      margin-bottom: 0.3rem;
+      border-bottom: none !important;
+    }
+
+    .paper-link:hover {
+      color: var(--link-hover);
     }
 
     .paper-authors {
-      color: var(--text-color);
-      font-size: 0.95em;
+      font-size: 0.87rem;
+      color: var(--text-secondary);
       line-height: 1.5;
-      opacity: 0.8;
     }
 
-    /* Responsive Enhancements */
-    @media (max-width: 1024px) {
-      .papers-table-container {
-        margin: 1rem;
-        border-radius: 8px;
-      }
-      
+    @media (max-width: 768px) {
       .papers-table th,
-      .papers-table td {
-        padding: 1rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .papers-table-container {
-        margin: 0.5rem;
-        box-shadow: none;
-        border: 1px solid var(--border-color);
-      }
-
-      .papers-table {
-        display: block;
-      }
-      
-      .papers-table th {
-        font-size: 1em;
-        padding: 0.75rem;
-      }
-
-      .papers-table td {
-        padding: 0.75rem;
-      }
-      
-      .papers-table thead,
-      .papers-table tbody,
-      .papers-table tr {
-        display: block;
-      }
-      
-      .papers-table tr {
-        margin-bottom: 1rem;
-        border-bottom: 2px solid var(--border-color);
-      }
-      
-      .papers-table td {
-        display: block;
-        text-align: left;
-        border-bottom: none;
-      }
-      
-      .papers-table td:before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      .paper-title {
-        font-size: 1em;
-      }
-
-      .paper-authors {
-        font-size: 0.9em;
-      }
-    }
-
-    /* Banner Enhancement */
-    .banner-text {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .content-section {
-      padding: 2rem 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .banner {
-        height: 300px !important;
-      }
+      .papers-table td { padding: 0.7rem 1rem; }
+      .paper-title { font-size: 0.93rem; }
+      .paper-authors { font-size: 0.83rem; }
     }
   </style>
 </head>
@@ -186,20 +136,99 @@
     </div>
 
     <div class="content">
-    <div class="content-section">
       <div class="content-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <div class="papers-table-container">
-              <h3>Coming Soon</h3>
-              <p>The list of accepted papers will be available after the notification deadline.</p>
+
+            <p class="text">MCMI 2026 accepted <strong>7 papers</strong> organized into three thematic sessions. Each paper is presented with a 15-minute talk followed by 5 minutes of Q&amp;A.</p>
+
+            <div class="papers-wrap">
+              <table class="papers-table">
+                <thead>
+                  <tr>
+                    <th style="width:48px;">#</th>
+                    <th>Title &amp; Authors</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr class="s1 session-header">
+                    <td colspan="2">Session 1 - Security &amp; Anomaly Detection</td>
+                  </tr>
+                  <tr class="s1 paper-row">
+                    <td class="paper-num">5</td>
+                    <td>
+                      <div class="paper-title">Sunglasses-Region Adversarial Perturbations for Feature-Space Face Recognition Attacks</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Chia-Po Wei, Sheng-Pin Chang, Chun-Yao Chen, I-Syuan Lee</div>
+                    </td>
+                  </tr>
+                  <tr class="s1 paper-row">
+                    <td class="paper-num">9</td>
+                    <td>
+                      <div class="paper-title">Detect, Anticipate, and Explain Anomalies in Agricultural Robots: A Review</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Thomas Trouve, Riccardo Bertoglio, Sandro Bimonte, Jocelyn de goer, Damien Appert</div>
+                    </td>
+                  </tr>
+
+                  <tr class="s2 session-header">
+                    <td colspan="2">Session 2 - Vision-Language Retrieval</td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="paper-num">3</td>
+                    <td>
+                      <div class="paper-title">SemRank: Semantic Image Retrieval via Knowledge Graph Filtering and CLIP Embeddings</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Sourav Pandey, Ashish Singh Patel</div>
+                    </td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="paper-num">7</td>
+                    <td>
+                      <div class="paper-title">Leveraging Phrase-Level Consistency between Images and Texts for Text-Based Person Search</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Kota Watanabe, Yuta Shirakawa</div>
+                    </td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="paper-num">11</td>
+                    <td>
+                      <div class="paper-title">Evaluating Pre-trained Image Encoders of Vision-Language and Multimodal Models for Synthetic Facial Image Detection</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Liyue Fan, Joseph Roberson</div>
+                    </td>
+                  </tr>
+
+                  <tr class="s3 session-header">
+                    <td colspan="2">Session 3 - Real-World &amp; Edge Deployment</td>
+                  </tr>
+                  <tr class="s3 paper-row">
+                    <td class="paper-num">12</td>
+                    <td>
+                      <div class="paper-title">Vision-Language Models for Gait-Based Screening via Zero-Shot and Multimodal In-Context Learning</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Moreno La Quatra, Vito Cammarata, Gabriele Trovato, Vincenzo Conti, Valerio Salerno, Salvatore Sorce, Nicole Cilia</div>
+                    </td>
+                  </tr>
+                  <tr class="s3 paper-row">
+                    <td class="paper-num">8</td>
+                    <td>
+                      <div class="paper-title">Gaze-based Attention-driven Multimodal Single-Object Inference for Microcontroller-Class Edge Vision</div>
+                      <!-- <a href="#" class="paper-link">Slides</a> -->
+                      <div class="paper-authors">Sofia Marilina Glorioso, Andrea Pietro Arena, Ivana Guarneri, Salvatore Sorce</div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   <div class="footer-container"></div>
 </body>
 </html>

@@ -92,6 +92,117 @@
       font-style: italic;
     }
 
+    .prog-wrap {
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .prog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+    }
+
+    .prog-table th {
+      padding: 0.8rem 1.25rem;
+      text-align: left;
+      color: white;
+      background: var(--header-color);
+      font-weight: 600;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .prog-table td {
+      padding: 0.8rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    .prog-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .prog-table .time-cell {
+      white-space: nowrap;
+      width: 148px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* Session label rows */
+    .prog-table .session-header td {
+      padding: 0.45rem 1.25rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .prog-table .s1.session-header td { background: rgba(0, 74, 172, 0.09); color: #004aac; }
+    .prog-table .s2.session-header td { background: rgba(255, 49, 48, 0.09); color: #c42525; }
+    .prog-table .s3.session-header td { background: rgba(126, 64, 114, 0.09); color: #7e4072; }
+
+    /* Paper rows */
+    .prog-table .s1.paper-row td { background: rgba(0, 74, 172, 0.025); }
+    .prog-table .s2.paper-row td { background: rgba(255, 49, 48, 0.025); }
+    .prog-table .s3.paper-row td { background: rgba(126, 64, 114, 0.025); }
+
+    /* Break row */
+    .prog-table .break-row td {
+      background: var(--secondary-bg);
+      color: var(--text-secondary);
+      font-style: italic;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .prog-paper-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--text-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .prog-paper-link {
+      display: inline-block;
+      font-size: 0.81rem;
+      font-weight: 500;
+      color: var(--link-color);
+      margin-bottom: 0.25rem;
+      border-bottom: none !important;
+    }
+
+    .prog-paper-link:hover {
+      color: var(--link-hover);
+    }
+
+    .prog-paper-authors {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .prog-note {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .prog-table th,
+      .prog-table td { padding: 0.65rem 0.9rem; }
+      .time-cell { width: 110px; }
+      .prog-paper-title { font-size: 0.9rem; }
+    }
+
   </style>
 </head>
 
@@ -128,11 +239,106 @@
               The MCMI workshop will take place in 2026, in Lyon, France, co-located with ICPR 2026.
             </p>
 
-            <h3>Tentative Workshop Program</h3>
-            
-            <div class="text">
-              <p>Coming Soon</p>
+            <div class="prog-wrap">
+              <table class="prog-table">
+                <thead>
+                  <tr>
+                    <th style="width:148px;">Time</th>
+                    <th>Event</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td class="time-cell">08:30 - 08:40</td>
+                    <td>Welcome &amp; opening remarks</td>
+                  </tr>
+                  <tr>
+                    <td class="time-cell">08:40 - 09:20</td>
+                    <td>Invited talk - speaker TBA</td>
+                  </tr>
+
+                  <tr class="s1 session-header">
+                    <td colspan="2">Session 1 - Security &amp; Anomaly Detection</td>
+                  </tr>
+                  <tr class="s1 paper-row">
+                    <td class="time-cell">09:20 - 09:40</td>
+                    <td>
+                      <div class="prog-paper-title">Sunglasses-Region Adversarial Perturbations for Feature-Space Face Recognition Attacks</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Chia-Po Wei, Sheng-Pin Chang, Chun-Yao Chen, I-Syuan Lee</div>
+                    </td>
+                  </tr>
+                  <tr class="s1 paper-row">
+                    <td class="time-cell">09:40 - 10:00</td>
+                    <td>
+                      <div class="prog-paper-title">Detect, Anticipate, and Explain Anomalies in Agricultural Robots: A Review</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Thomas Trouve, Riccardo Bertoglio, Sandro Bimonte, Jocelyn de goer, Damien Appert</div>
+                    </td>
+                  </tr>
+
+                  <tr class="break-row">
+                    <td colspan="2">Coffee break - 10:00 - 10:30</td>
+                  </tr>
+
+                  <tr class="s2 session-header">
+                    <td colspan="2">Session 2 - Vision-Language Retrieval</td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="time-cell">10:30 - 10:50</td>
+                    <td>
+                      <div class="prog-paper-title">SemRank: Semantic Image Retrieval via Knowledge Graph Filtering and CLIP Embeddings</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Sourav Pandey, Ashish Singh Patel</div>
+                    </td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="time-cell">10:50 - 11:10</td>
+                    <td>
+                      <div class="prog-paper-title">Leveraging Phrase-Level Consistency between Images and Texts for Text-Based Person Search</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Kota Watanabe, Yuta Shirakawa</div>
+                    </td>
+                  </tr>
+                  <tr class="s2 paper-row">
+                    <td class="time-cell">11:10 - 11:30</td>
+                    <td>
+                      <div class="prog-paper-title">Evaluating Pre-trained Image Encoders of Vision-Language and Multimodal Models for Synthetic Facial Image Detection</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Liyue Fan, Joseph Roberson</div>
+                    </td>
+                  </tr>
+
+                  <tr class="s3 session-header">
+                    <td colspan="2">Session 3 - Real-World &amp; Edge Deployment</td>
+                  </tr>
+                  <tr class="s3 paper-row">
+                    <td class="time-cell">11:30 - 11:50</td>
+                    <td>
+                      <div class="prog-paper-title">Vision-Language Models for Gait-Based Screening via Zero-Shot and Multimodal In-Context Learning</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Moreno La Quatra, Vito Cammarata, Gabriele Trovato, Vincenzo Conti, Valerio Salerno, Salvatore Sorce, Nicole Cilia</div>
+                    </td>
+                  </tr>
+                  <tr class="s3 paper-row">
+                    <td class="time-cell">11:50 - 12:10</td>
+                    <td>
+                      <div class="prog-paper-title">Gaze-based Attention-driven Multimodal Single-Object Inference for Microcontroller-Class Edge Vision</div>
+                      <!-- <a href="#" class="prog-paper-link">Slides</a> -->
+                      <div class="prog-paper-authors">Sofia Marilina Glorioso, Andrea Pietro Arena, Ivana Guarneri, Salvatore Sorce</div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="time-cell">12:10 - 12:30</td>
+                    <td>Closing remarks &amp; open discussion</td>
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
+            <p class="prog-note">Each paper: 15' presentation + 5' Q&amp;A</p>
           </div>
         </div>
       </div>
@@ -151,7 +357,7 @@
       <div class="content-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <p>Keynote speakers will be announced soon.</p>
+            <p class="text">The invited talk is scheduled for <strong>08:40 - 09:20</strong>. Speaker and title will be announced soon.</p>
           </div>
         </div>
       </div>
