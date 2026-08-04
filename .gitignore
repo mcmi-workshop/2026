@@ -1,5 +1,6 @@
 *~
 .DS_Store
 .idea/
-cfp/*temp-resources/opening-slides.md
+cfp/*
+temp-resources/opening-slides.md
 temp-resources/papers.txt
