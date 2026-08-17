@@ -203,6 +203,91 @@
       .prog-paper-title { font-size: 0.9rem; }
     }
 
+    /* Keynote Speaker Card */
+    .keynote-card {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      background: var(--card-bg);
+    }
+
+    .keynote-title-bar {
+      background: linear-gradient(135deg, #004aac 0%, #1a5fbd 50%, #ff3130 100%);
+      padding: 18px 28px;
+    }
+
+    .keynote-talk-title {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .keynote-body {
+      padding: 24px 28px;
+    }
+
+    .keynote-header {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .keynote-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 3px solid var(--primary-subtle);
+      flex-shrink: 0;
+    }
+
+    .keynote-info {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .keynote-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 2px;
+    }
+
+    .keynote-affil {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .keynote-bio {
+      border-top: 1px solid var(--border-color);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .keynote-bio-label {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-color);
+      background: var(--primary-subtle);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .keynote-title-bar,
+      .keynote-body { padding: 18px 20px; }
+      .keynote-photo { width: 100px; height: 100px; }
+    }
+
   </style>
 </head>
 
@@ -255,7 +340,10 @@
                   </tr>
                   <tr>
                     <td class="time-cell">08:40 - 09:20</td>
-                    <td>Invited talk - speaker TBA</td>
+                    <td>
+                      <div class="prog-paper-title">Keynote: Movement as a Biomarker: Multimodal Analysis of Handwriting and Gait for Cognitive Disorders</div>
+                      <div class="prog-paper-authors">Francesco Fontanella, University of Cassino and Southern Lazio, Italy (<a href="#keynotes" class="prog-paper-link">more info</a>)</div>
+                    </td>
                   </tr>
 
                   <tr class="s1 session-header">
@@ -356,8 +444,32 @@
     <div class="content">
       <div class="content-table flex-column">
         <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">The invited talk is scheduled for <strong>08:40 - 09:20</strong>. Speaker and title will be announced soon.</p>
+          <div class="flex-item flex-column full-width">
+            <p class="text">The keynote talk is scheduled for <strong>08:40 - 09:20</strong>.</p>
+
+            <div class="keynote-card">
+              <div class="keynote-title-bar">
+                <p class="keynote-talk-title">Movement as a Biomarker: Multimodal Analysis of Handwriting and Gait for Cognitive Disorders</p>
+              </div>
+              <div class="keynote-body">
+                <div class="keynote-header">
+                  <img class="keynote-photo" src="img/keynote/ff.jpeg" alt="Francesco Fontanella">
+                  <div class="keynote-info">
+                    <p class="text keynote-name">Francesco Fontanella</p>
+                    <p class="text keynote-affil">Associate Professor, Department of Electrical and Information Engineering, University of Cassino and Southern Lazio, Italy</p>
+                  </div>
+                </div>
+                <div class="keynote-bio">
+                  <p class="text keynote-bio-label">About the Speaker</p>
+                  <p class="text">
+                    Francesco Fontanella is currently an associate professor at the Department of Electrical and Information Engineering of the University of Cassino and Southern Lazio, Italy. His main research interests involve Machine Learning, Data Science, Complex Systems, and Evolutionary Computation. He applies the results of his research to the development of applications to deal with real-life problems. These problems include detecting and predicting neurodegenerative and Developmental diseases through handwriting analysis, writer identification in ancient manuscripts, and water pollution detection.
+                  </p>
+                  <p class="text">
+                    He co-authored more than 100 peer-reviewed publications and contributed to several research projects. He is actively involved in organizing workshops at some of the top conferences in the field of computational intelligence. He also regularly serves as a guest editor and as an editorial board member of several international scientific journals.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
